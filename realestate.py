@@ -14,22 +14,25 @@ print ("Which is $" + str (efdown))
 numofmonths = input ("What is the number of months you are financing? ")
 floatnumofmonths = float (numofmonths)
 amountfinanced = floatpurchase - efdown
-print (str (amountfinanced))
+print (("This is the amount you are financing $")+(str (amountfinanced)))
 
 #County taxed assessed value
 assessedvalue = float (input ("What is the County Assessed Value? "))
 excisetaxpercent = float(0.0178)
 excisefee = float (excisetaxpercent * assessedvalue)
-print ("The County excise fee is " + "$" + str (excisefee))
+print ("\n The County excise fee is " + "$" + str (excisefee))
 
 #Calculate Vestus commission
 vestuscommtaxpercent = float (0.03)
 vestuscommission = float (vestuscommtaxpercent * assessedvalue)
-print ("Vestus Agent Commission is $" + str (vestuscommission))
+print ("\n Vestus Agent Commission is $" + str (vestuscommission))
 
 #Other fixed fees including loan processing fee, recording, reconveyence, docprep
 totalfixedfees = float (780.00)
 
-#Calculate total cash to bring to auction
+#Calculate and display total cash to bring to auction
+print ('''This is the amount of cash that you need to fund this deal,
+see the following breakdown: \n''')
 
-
+print ("Line Item    \t\t\t$Amount of Cash \n")
+print ("Fixed Fees   \t\t\t$" + str (totalfixedfees))
